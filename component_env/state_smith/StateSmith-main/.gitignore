@@ -1,0 +1,12 @@
+*.class
+.antlr/
+
+example-output/render2
+/.vs
+
+*.bkp
+
+*.dtmp
+
+src/StateSmith.CliTest/Run/examples/1/statesmith.runinfo.json
+

@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "my_api.h": "c",
+        "lasertagmenu1.h": "c",
+        "buttons.h": "c",
+        "buttonsm1.h": "c",
+        "stdint.h": "c"
+    },
+    "hediet.vscode-drawio.plugins": [
+        {"file": "${workspaceFolder}/../StateSmith-drawio-plugin-v0.1.0.js"}
+    ]
+}

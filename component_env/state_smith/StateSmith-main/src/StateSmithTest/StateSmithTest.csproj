@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Output\Algos\out2\Balanced1_CSharp\RocketSm.cs" />
+    <Compile Remove="Output\Algos\out2\Balanced2_CSharp\RocketSm.cs" />
+    <Compile Remove="Output\Algos\out2\Default_CSharp\RocketSm.cs" />
+    <Compile Remove="Output\Algos\out\Balanced1_CSharp\RocketSm.cs" />
+    <Compile Remove="Output\Algos\out\Balanced2_CSharp\RocketSm.cs" />
+    <Compile Remove="Output\Algos\out\Default_CSharp\RocketSm.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Tomlyn" Version="0.17.0" />
+    <PackageReference Include="xunit" Version="2.4.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StateSmith\StateSmith.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Output\Algos\out2\Balanced1_CSharp\RocketSm.cs" />
+    <None Include="Output\Algos\out2\Balanced2_CSharp\RocketSm.cs" />
+    <None Include="Output\Algos\out2\Default_CSharp\RocketSm.cs" />
+    <None Include="Output\Algos\out\Balanced1_CSharp\RocketSm.cs" />
+    <None Include="Output\Algos\out\Balanced2_CSharp\RocketSm.cs" />
+    <None Include="Output\Algos\out\Default_CSharp\RocketSm.cs" />
+  </ItemGroup>
+
+</Project>

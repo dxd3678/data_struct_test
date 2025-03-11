@@ -1,0 +1,35 @@
+@startuml {{smName}}
+
+' //////////////////////// STATE ORGANIZATION ///////////////////////
+' Note: StateSmith treats state names and events as case insensitive.
+' More info: https://github.com/StateSmith/StateSmith/wiki/PlantUML
+
+state State1
+state State2
+
+
+' ///////////////////////// STATE HANDLERS /////////////////////////
+' Syntax: https://github.com/StateSmith/StateSmith/wiki/Behaviors
+
+[*] -> State1
+
+' State1
+State1: enter / count += 1{{SC}}
+State1: exit  / 
+State1 --> State2 : event1
+
+' State2
+State2: enter / count += 10{{SC}}
+State2: exit  / 
+State2 --> State1 : event2
+
+
+' //////////////////////// StateSmith config ////////////////////////
+' The below special comment block sets the StateSmith configuration.
+' More info: https://github.com/StateSmith/StateSmith/issues/335
+
+/'! $CONFIG : toml
+
+{{configToml}}
+'/
+@enduml
